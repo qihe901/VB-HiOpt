@@ -1,4 +1,15 @@
-"""Minimal forward pass on a dummy DE batch. No dataset required."""
+"""Minimal forward pass on a dummy DE batch. No dataset required.
+
+For the PDF training loop (alternating updates, 5-fold / LOSO, MC eval):
+
+    python train.py --protocol smoke
+    python train.py --protocol ws5fold --data_root <DE_root> --label_path <labels.npy>
+    python train.py --protocol loso --data_root <DE_root> --dimension valence
+
+Paper Figures 2–7 (demo layout, or from exported arrays):
+
+    python plot_figures.py all --out_dir figures
+"""
 from __future__ import annotations
 
 import torch
